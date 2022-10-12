@@ -17,12 +17,14 @@ public class Position {
 
     @Override
     public boolean equals(Object o){
-        //literally the same position
-        if (this == o) return true;
-        //doesn't accept nulls
-        if (o == null) return false;
-        //doesn't accept different classes
-        if (getClass() != o.getClass()) return false;
+        if (this == o) //literally the same position
+            return true;
+
+        if (o == null) //doesn't accept nulls
+            return false;
+
+        if (getClass() != o.getClass()) //doesn't accept different classes
+            return false;
 
         Position p = (Position) o;
         return (x == p.getX() && y == p.getY());
